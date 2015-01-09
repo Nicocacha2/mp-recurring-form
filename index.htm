@@ -1,0 +1,120 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]--> 
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]--> 
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Avoid script blocking -->
+	<script></script>
+	<meta charset="utf-8">
+	<title>MercadoPago - Generador de links de suscripción</title>
+	<!-- Chico-UI Core Style Sheet -->
+	<link rel="stylesheet" href="http://chico-ui.com.ar/versions/0.8.0/chico-min-0.8.0.css">
+	<!--[if lt IE 7 ]>
+		<script src="./libs/js/dd_belatedpng.js"></script>
+		<script> DD_belatedPNG.fix('img, .ico'); //fix any <img> or .ico background-images </script>
+	<![endif]--> 
+<head>
+<body>
+	<br>
+	
+	<div class="ch-g1">
+		<div class="box">
+			<img style="float:right;" src="http://static.mlstatic.com/org-img/Manual/ManualMP/imgs/isologoHorizontal.png" width="200" border="0" height="50"/>
+			<h1>Generador de links de suscripci&oacute;n</h1>
+			<form id="example_form" action="preapproval.php" method="post">
+				<fieldset>
+				
+					<div class="field-box">
+
+					<legend>Datos de tu cuenta</legend>
+					
+						<label for="example_field">
+							<span>Client ID:</span><input required name="client_id" type="text" value="" id="client_id" size="50" />
+						</label>
+						<p class="help"></p>
+						
+						<label for="example_field">
+							<span>Client Secret:</span><input required name="client_secret" type="text" value="" id="client_secret" size="50" />
+						</label>
+						<p class="help">Obten&eacute; tus credenciales de <a href="https://www.mercadopago.com/mla/herramientas/aplicaciones" target="_blank">Argentina</a>, <a href="https://www.mercadopago.com/mlb/ferramentas/aplicacoes" target="_blank">Brasil</a> o <a href="https://www.mercadopago.com/mlm/herramientas/aplicaciones" target="_blank">México</a>.</p>
+					
+					</br>
+					<legend>Datos de la suscripción</legend>
+					
+						<label for="example_field">
+							<span>E-mail:</span><input required name="payer_email" type="email" value="" id="payer_email" size="50" />
+						</label>
+						<p class="help">Direcci&oacute;n de correo electrónico de la persona que se suscribir&aacute;.</p>
+						
+						<label for="example_field">
+							<span>Reason:</span><input required name="reason" type="text" value="" id="reason" size="50" />
+						</label>
+						<p class="help">Descripci&oacute;n que ver&aacute; el comprador en el checkout.</p>
+						
+						<label for="example_field">
+							<span>Referencia:</span><input required name="external_reference" type="text" value="" id="external_reference" size="50" />
+						</label>
+						<p class="help">Sirve para identificar el cobro en MercadoPago.</p>
+
+						<label for="example_field">
+							<span>URL de retorno:</span><input required name="backurl" type="text" value="" id="backurl" size="50" />
+						</label>
+						<p class="help">URL donde quieres redirigir luego de suscribirse. Formato: http://www.example.com</p>
+					
+					</br>					
+					<legend>Datos del pago</legend>
+						
+						<label for="example_field">
+							<span>Importe:</span><input required name="transaction_amount" type="text" value="00.0" id="transaction_amount" size="50" />
+						</label>
+						<p class="help">Precio total a abonar por el comprador.</p>
+						
+						<label for="example_field">
+							<span>Moneda:</span>
+								<select name="currency_id">
+									<option value="ARS" selected>Peso argentino</option>
+									<option value="MXN">Peso mexicano</option>
+									<option value="BRL">Real</option>
+								</select>
+						</label>
+						<p class="help">Moneda con la cual se desea cobrar.</p>
+						
+						<label for="example_field">
+							<span>Frecuencia:</span><input required name="frequency" type="text" value="1" id="frequency" size="8" />
+							<select name="frequency_type">
+										<option value="months" selected>Mes</option>
+										<option value="days">D&iacute;a</option>
+							</select>
+						</label>
+						<p class="help">Frecuencia en la que se cobrar&aacute; la suscripci&oacute;n.</p>
+												
+						<label for="example_field">
+							<span>Inicio (opcional):</span><input name="start_date" type="text" value="2013-01-01T00:00:00.000-03:00" id="start_date" size="50" />
+						</label>
+						<p class="help">Fecha en la que se procesará el primer pago. Formato: 2013-01-01T00:00:00.000-03:00</p>
+						<p class="help">Dejar este campo vacío indica que la fecha de inicio ser&aacute; hoy.</p>						
+						<label for="example_field">
+							<span>Fin (Opcional):</span><input name="end_date" type="text" value="2013-01-01T00:00:00.000-03:00" id="end_date" size="50" />
+						</label>
+						<p class="help">Fecha en la que se dejar&aacute; de cobrar. Formato: 2013-01-01T00:00:00.000-03:00</p>
+						<p class="help">Dejar este campo vacío indica que la suscripci&oacute;n ser&aacute; por tiempo ilimitado.</p>						
+					
+					</div>
+
+				</fieldset>		
+				<p></p>
+		
+				<p class="actions">
+					<input type="submit" value="Generar link" class="btn primary">
+				</p>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
